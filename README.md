@@ -4,11 +4,10 @@
 The purpose of this project was to analyze Amazon reviews written by members of the paid Amazon Vine program.  Specifically to distinguish if there can be bias toward favorable reviews of video game products or bias toward paid vs unpaid reviews, focusing on 5-star and Vine vs Non-Vine reviews.  The video game review dataset provided was extracted directly from Amazon.
 
 ## Technical Information
-The technical ETL (Extract, Transform, & Load) code was written in Python with Pandas done in Google Colaboratory, utilizing PySpark, connecting to the AWS cloud as a database.  Also, PostgreSQL tables were created in PGAdmin connecting to an RDS (relational database) on the AWS cloud on the backend.  The AWS RDS instance and S3 bucket has been decommissioned as to not incur charges for this development work.  Figure1 depicts the tables created in PGAdmin where the tables were created.
+The technical ETL (Extract, Transform, & Load) code was written in Python with Pandas done in Google Colaboratory, utilizing PySpark, connecting to the AWS cloud as a database.  Also, PostgreSQL tables were created in PGAdmin connecting to an RDS (relational database) on the AWS cloud on the backend.  The AWS RDS instance and S3 bucket has been decommissioned as to not incur charges for this development work.  Figure 1 depicts the tables created in PGAdmin where the tables were created.
 
 !['review_id_table.PNG'](./Resources/review_id_table.PNG)
-
-#### Figure1
+#### Figure 1
 
 ## Expected Deliverables
 Here are the list of deliverables requested for this project: 
@@ -27,11 +26,10 @@ Here are the list of deliverables requested for this project:
 ## Results and conclusion
 How many Vine reviews and non-Vine reviews were there?
 
-Out of the over 1.7 million total Vine reviews for video games, the scope needed to be narrowed down to retrieve total_votes count greater than 20 as those were more likely to be helpful and to avoid having division by zero errors.  This brought the total count of viable reviews to 65K.  See Figure2.  
+Out of the over 1.7 million total Vine reviews for video games, the scope needed to be narrowed down to retrieve total_votes count greater than 20 as those were more likely to be helpful and to avoid having division by zero errors.  This brought the total count of viable reviews to 65K.  See Figure 2.  
 
 !['High_total_votes.PNG'](./Resources/High_total_votes.PNG)
-
-#### Figure1
+#### Figure 2
 
 Of those 65K reviews, further filtering was conducted where the number of helpful_votes were divided by total_votes and the ones analyzed were equal to or greater than 50%.  Then the data was further scrubbed to focus just on the 20K 5-star rated reviews.
 
